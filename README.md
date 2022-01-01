@@ -1,8 +1,8 @@
 
-# Git Quick Reference Document
+# Docker Quick Reference Document
 
 Repository of reference document (the "cheat sheet") for
-[Git Quick Reference](https://github.com/easyintent/quickref)
+[Docker Quick Reference](https://github.com/easyintent/quickref)
 android application.
 It is written in XML to make it easier to edit and validate.
 
@@ -75,11 +75,11 @@ generated on the same directory.
 
 Go to android git quick reference application project,
 copy `quickref.sqlite` to the
-[`assets`](https://github.com/easyintent/quickref/tree/master/app/src/main/assets)
+[`assets`](https://github.com/Benakor/quickref/tree/master/app/src/main/assets)
 folder and increase database version number in the `version.properties` file.
 Build and run the application.
 
 # License
 
 Licensed under same license as the
-[android application](https://github.com/easyintent/quickref).
+[android application](https://github.com/BenAkor/quickref).
