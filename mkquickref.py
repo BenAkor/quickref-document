@@ -15,7 +15,8 @@ CREATE_TABLE = '''
         priority INT,
         title TEXT,
         summary TEXT,
-        command TEXT
+        command TEXT,
+        example TEXT
     )
 '''
 
@@ -23,16 +24,16 @@ CREATE_TABLE = '''
 #
 INSERT_ROWS = '''
     INSERT INTO quickref
-        (id, parent_id, leaf, priority, title, summary, command)
+        (id, parent_id, leaf, priority, title, summary, command, example)
     VALUES 
-        (:id, :parent_id, :leaf, :priority, :title, :summary, :command)
+        (:id, :parent_id, :leaf, :priority, :title, :summary, :command, :example)
 '''
 
 # Virtual table using full text search for faster text search
 #
 CREATE_SEARCH_TABLE = '''
     CREATE VIRTUAL TABLE quicksearch
-        USING fts4(content=quickref, title, summary, command)
+        USING fts4(content=quickref, title, summary, command, example)
 '''
 
 REBUILD_INDEX = '''
@@ -102,7 +103,7 @@ def _parse_xml_item(xml_item):
     item['id'] = xml_item.get('id')
 
     children = []
-    known_tags = ('title', 'summary', 'command')
+    known_tags = ('title', 'summary', 'command', 'example')
 
     for i in xml_item:
         if i.tag == 'list':
@@ -141,6 +142,7 @@ def _flatten_item(items, parent_id):
         title = item.get('title')
         summary = item.get('summary')
         command = item.get('command')
+        example = item.get('example')
         children = item.get('list')
 
         # make sure it is valid UUID
@@ -153,7 +155,8 @@ def _flatten_item(items, parent_id):
             'priority': priority,
             'title': title,
             'summary':  summary,
-            'command':  command
+            'command':  command,
+            'example':  example
         }
 
         rows.append(row)

@@ -26,6 +26,9 @@
                 <element name="command">
                     <text/>
                 </element>
+                <element name="example">
+                    <text/>
+                </element>
                 <element name="list">
                     <zeroOrMore>
                         <ref name="itemElement"/>
