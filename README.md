@@ -2,7 +2,7 @@
 # Docker Quick Reference Document
 
 Repository of reference document (the "cheat sheet") for
-[Docker Quick Reference](https://github.com/easyintent/quickref)
+[Docker Quick Reference](https://github.com/BenAkor/quickref)
 android application.
 It is written in XML to make it easier to edit and validate.
 
