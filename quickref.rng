@@ -26,6 +26,13 @@
                 <element name="command">
                     <text/>
                 </element>
+                <element name="list">
+                    <zeroOrMore>
+                        <ref name="itemElement"/>
+                    </zeroOrMore>
+                </element>
+            </choice>
+            <choice>
                 <element name="example">
                     <text/>
                 </element>
