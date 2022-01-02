@@ -15,7 +15,7 @@
                 <title>List all Docker Images</title>
                 <summary>List all images that are local stored</summary>
                 <command>docker image ls </command>
-                <example><example/>
+                <example />
             </item>
              <item id="85c41700-6b27-11ec-a814-a7c929e16225">
                 <title>Deleting Docker Images</title>
@@ -48,6 +48,7 @@
                 <example>Ex: docker push rokatech/alpine:3.0</example>
             </item>
         </list>
+    </item>
     <item id="4b2c2190-6b28-11ec-a814-a7c929e16225">
         <title>Working with Docker Containers</title>
         <summary>Working with Docker Containers from Images</summary>
@@ -119,4 +120,5 @@
                 <example></example>
             </item>
         </list>
+    </item>
 </quickref>
